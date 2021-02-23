@@ -10,14 +10,13 @@
   svg {
       height: 30px;
   }
-  
 
 
  /* NAVBAR */
  
  .navbar {
     font-size: 18px;
-    background-color: #FCA5A5    ;
+    background-color: #fafafa    ;
     padding-bottom: 10px;
   }
   
@@ -29,7 +28,7 @@
   .nav-links,
   .logo {
     text-decoration: none;
-    color: rgba(255, 255, 255, 0.7);
+    color: #F87171;
   }
   
   .main-nav li {
@@ -150,7 +149,7 @@
     padding: 0 20px;
     text-align: center;
     background: #333;
-    color: #fff;
+    color: #fafafa;
     border-radius: 5px 5px 0 0;
     font-weight: bold;
     letter-spacing: 0.5px;
@@ -162,20 +161,21 @@
     }
   }
 
-  /* Colum headers colors */
+  /* Column header colors */
+
   .board-column.todo .board-column-header {
-    background:#BBF7D0;
+    background:#FCA5A5;
   }
   .board-column.working .board-column-header {
-    background: #86EFAC;
+    background: #FCA5A5;
   }
   .board-column.done .board-column-header {
-    background: #4ADE80;
+    background: #F87171;
   }
   .board-column-content-wrapper {
     position: relative;
     padding: 8px;
-    background: #f0f0f0;
+    background: #fafafa;
     height: calc(100vh - 90px);
     overflow-y: auto;
     border-radius: 0 0 5px 5px;
