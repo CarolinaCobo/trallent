@@ -161,14 +161,16 @@
       text-indent: -1000px;
     }
   }
+
+  /* Colum headers colors */
   .board-column.todo .board-column-header {
-    background: #4A9FF9;
+    background:#BBF7D0;
   }
   .board-column.working .board-column-header {
-    background: #f9944a;
+    background: #86EFAC;
   }
   .board-column.done .board-column-header {
-    background: #2ac06d;
+    background: #4ADE80;
   }
   .board-column-content-wrapper {
     position: relative;
