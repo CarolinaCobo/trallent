@@ -1,4 +1,4 @@
-/* Code from https://codepen.io/Sukhjinder-arora/pen/OZGomv with changes */
+/* Code from https://codepen.io/nikkipantony/pen/qoKORX with changes of my own */
 
 * {
     box-sizing: border-box;
@@ -99,121 +99,229 @@
 
 
 
-/* Code from: https://codepen.io/niklasramo/pen/BrYaOp & Muuri documentation*/
- 
-  html, #dashboard {
-    position: relative;
-    width: 100%;
-    height: 100%;
-    font-family: Helvetica, Arial, sans-serif;
-  }
-#dashboard {
-    margin: 0;
-    padding: 20px 10px;
-  }
+/* Code from: & XXXXXXXXX  documentation*/
 
-.drag-container {
-    position: absolute;
-    left: 0;
-    top: 0;
-    z-index: 1000;
-  }
-  .board {
-    position: relative;
-  }
-  .board-column {
-    position: absolute;
-    left: 0;
-    top: 0;
-    padding: 0 10px;
-    width: calc(100% / 3);
-    z-index: 1;
-  }
-  .board-column.muuri-item-releasing {
-    z-index: 2;
-  }
-  .board-column.muuri-item-dragging {
-    z-index: 3;
-    cursor: move;
-  }
-  .board-column-container {
-    position: relative;
-    width: 100%;
-    height: 100%;
-  }
-  .board-column-header {
-    position: relative;
-    height: 50px;
-    line-height: 50px;
-    overflow: hidden;
-    padding: 0 20px;
-    text-align: center;
-    background: #333;
-    color: #fafafa;
-    border-radius: 5px 5px 0 0;
-    font-weight: bold;
-    letter-spacing: 0.5px;
-    text-transform: uppercase;
-  }
-  @media (max-width: 600px) {
-    .board-column-header {
-      text-indent: -1000px;
-    }
-  }
+h1,
+h4 {
+  font-family: "Arimo", sans-serif;
+  line-height: 1.3;
+}
 
-  /* Column header colors */
+header h1 {
+  font-size: 2.4rem;
+  margin: 4rem auto;
+}
 
-  .board-column.todo .board-column-header {
-    background:#FCA5A5;
-  }
-  .board-column.working .board-column-header {
-    background: #FCA5A5;
-  }
-  .board-column.done .board-column-header {
-    background: #F87171;
-  }
-  .board-column-content-wrapper {
-    position: relative;
-    padding: 8px;
-    background: #fafafa;
-    height: calc(100vh - 90px);
-    overflow-y: auto;
-    border-radius: 0 0 5px 5px;
-  }
-  .board-column-content {
-    position: relative;
-    min-height: 100%;
-  }
-  .board-item {
-    position: absolute;
-    width: calc(100% - 16px);
-    margin: 8px;
-  }
-  .board-item.muuri-item-releasing {
-    z-index: 9998;
-  }
-  .board-item.muuri-item-dragging {
-    z-index: 9999;
-    cursor: move;
-  }
-  .board-item.muuri-item-hidden {
-    z-index: 0;
-  }
-  .board-item-content {
-    position: relative;
-    padding: 20px;
-    background: #fff;
-    border-radius: 4px;
-    font-size: 17px;
-    cursor: pointer;
-    -webkit-box-shadow: 0px 1px 3px 0 rgba(0,0,0,0.2);
-    box-shadow: 0px 1px 3px 0 rgba(0,0,0,0.2);
-  }
-  @media (max-width: 600px) {
-    .board-item-content {
-      text-align: center;
-    }
-    .board-item-content span {
-      display: none;
-    }
-  }
+span {
+  font-size: 3rem;
+}
+
+p {
+  font-family: "Roboto Slab", serif;
+}
+
+a,
+a:link,
+a:active,
+a:visited {
+  color: #0066aa;
+  text-decoration: none;
+  border-bottom: #000013 0.16rem solid;
+}
+
+a:hover {
+  color: #000013;
+  border-bottom: #0066aa 0.16rem solid;
+}
+
+header,
+footer {
+  width: 40rem;
+  margin: 2rem auto;
+  text-align: center;
+}
+
+.add-task-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 20rem;
+  height: 5.3rem;
+  margin: auto;
+  background: #a8a8a8;
+  border: #000013 0.2rem solid;
+  border-radius: 0.2rem;
+  padding: 0.4rem;
+}
+
+.main-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.columns {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+  margin: 1.6rem auto;
+}
+
+.column {
+  width: 8.4rem;
+  margin: 0 0.6rem;
+  background: #a8a8a8;
+  border: #000013 0.2rem solid;
+  border-radius: 0.2rem;
+
+}
+
+.column-header {
+  padding: 0.1rem;
+  border-bottom: #000013 0.2rem solid;
+}
+
+.column-header h4 {
+  text-align: center;
+}
+
+.to-do-column .column-header {
+  background: #ff872f;
+}
+
+.doing-column .column-header {
+  background: #13a4d9;
+}
+
+.done-column .column-header {
+  background: #15d072;
+}
+
+.trash-column .column-header {
+  background: #ff4444;
+}
+
+.task-list {
+  min-height: 3rem;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  list-style-type: none;
+}
+
+.column-button {
+  text-align: center;
+  padding: 0.1rem;
+}
+
+.button {
+  font-family: "Arimo", sans-serif;
+  font-weight: 700;
+  border: #000013 0.14rem solid;
+  border-radius: 0.2rem;
+  color: #000013;
+  padding: 0.6rem 1rem;
+  margin-bottom: 0.3rem;
+  cursor: pointer;
+}
+
+.delete-button {
+  background-color: #ff4444;
+  margin: 0.1rem auto 0.6rem auto;
+}
+
+.delete-button:hover {
+  background-color: #fa7070;
+}
+
+.add-button {
+  background-color: #ffcb1e;
+  padding: 0 1rem;
+  height: 2.8rem;
+  width: 10rem;
+  margin-top: 0.6rem;
+}
+
+.add-button:hover {
+  background-color: #ffdd6e;
+}
+
+.task {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  vertical-align: middle;
+  list-style-type: none;
+  background: #fff;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  margin: 0.4rem;
+  height: 4rem;
+  border: #000013 0.15rem solid;
+  border-radius: 0.2rem;
+  cursor: move;
+  text-align: center;
+  vertical-align: middle;
+}
+
+#taskText {
+  background: #fff;
+  border: #000013 0.15rem solid;
+  border-radius: 0.2rem;
+  text-align: center;
+  font-family: "Roboto Slab", serif;
+  height: 4rem;
+  width: 7rem;
+  margin: auto 0.8rem auto 0.1rem;
+}
+
+.task p {
+  margin: auto;
+}
+
+/* Dragula CSS Release 3.2.0 from: https://github.com/bevacqua/dragula */
+
+.gu-mirror {
+  position: fixed !important;
+  margin: 0 !important;
+  z-index: 9999 !important;
+  opacity: 0.8;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=80)";
+  filter: alpha(opacity=80);
+}
+
+.gu-hide {
+  display: none !important;
+}
+
+.gu-unselectable {
+  -webkit-user-select: none !important;
+  -moz-user-select: none !important;
+  -ms-user-select: none !important;
+  user-select: none !important;
+}
+
+.gu-transit {
+  opacity: 0.2;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=20)";
+  filter: alpha(opacity=20);
+}
+
+
+#trash, #to-do, #doing, #done, #trash {
+  min-height: 80px;
+}
+
+
