@@ -13,7 +13,7 @@
 
 
  /* NAVBAR */
- 
+/*  
  .navbar {
     font-size: 18px;
     background-color: #fafafa    ;
@@ -58,7 +58,7 @@
 
   /* Navbar media query */
   
-  @media screen and (min-width: 768px) {
+  /* @media screen and (min-width: 768px) {
     .navbar {
       display: flex;
       justify-content: space-between;
@@ -95,7 +95,7 @@
       color: rgba(255, 255, 255, 1);
     }
   }
-  
+   */
 
 
 
@@ -103,8 +103,7 @@
 
 h1,
 h4 {
-  font-family: "Arimo", sans-serif;
-  line-height: 1.3;
+ 
 }
 
 header h1 {
@@ -171,7 +170,7 @@ footer {
 }
 
 .column {
-  width: 8.4rem;
+  width: 200px;
   margin: 0 0.6rem;
   background: #a8a8a8;
   border: #000013 0.2rem solid;
@@ -194,8 +193,8 @@ footer {
 
 .doing-column .column-header {
   background: #13a4d9;
-}
-
+}cv/;"|
+\][poiu transition]
 .done-column .column-header {
   background: #15d072;
 }
@@ -224,11 +223,9 @@ li {
 }
 
 .button {
-  font-family: "Arimo", sans-serif;
   font-weight: 700;
   border: #000013 0.14rem solid;
   border-radius: 0.2rem;
-  color: #000013;
   padding: 0.6rem 1rem;
   margin-bottom: 0.3rem;
   cursor: pointer;
